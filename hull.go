@@ -4,6 +4,7 @@ import (
 	"math"
 )
 
+// 凸包
 type hull []point
 
 type corner int
@@ -19,7 +20,7 @@ func cross(a, b, o point) float64 {
 	return (a.x-o.x)*(b.y-o.y) - (a.y-o.y)*(b.x-o.x)
 }
 
-// Uses the monotone chain algorithm.
+// Uses the monotone chain algorithm. 用于凸包的单调链算法
 // https://en.wikibooks.org/wiki/Algorithm_Implementation/Geometry/Convex_hull/Monotone_chain
 func buildHull(pts []point) hull {
 	// points will already be sorted.

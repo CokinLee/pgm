@@ -10,6 +10,7 @@ func newRectangle(i, j, k, l point) rectangle {
 	return rectangle{i, j, k, l}
 }
 
+// getArea 计算面积
 func (r *rectangle) getArea() float64 {
 	deltaXAB := r[0].x - r[1].x
 	deltaYAB := r[0].y - r[1].y
@@ -22,6 +23,7 @@ func (r *rectangle) getArea() float64 {
 	return lengthAB * lengthBC
 }
 
+// getHeight 计算高
 func (r *rectangle) getHeight() float64 {
 	deltaXAB := r[0].x - r[1].x
 	deltaYAB := r[0].y - r[1].y
@@ -30,6 +32,7 @@ func (r *rectangle) getHeight() float64 {
 	return lengthAB
 }
 
+// slopeAndIntercept 计算斜率和截距
 func (r *rectangle) slopeAndIntercept() (slope, intercept float64) {
 	// We take the midpoint of two sides and draw a line between them.
 	p1 := point{x: (r[0].x + r[1].x) / 2, y: (r[0].y + r[1].y) / 2}

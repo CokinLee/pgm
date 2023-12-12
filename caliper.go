@@ -4,6 +4,7 @@ import (
 	"math"
 )
 
+// 旋转卡尺算法
 // Ported from https://github.com/bkiers/RotatingCalipers.
 
 const sigma = 0.00000000001

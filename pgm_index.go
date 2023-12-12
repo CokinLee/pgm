@@ -105,6 +105,7 @@ func computePos(k float64, s Segment) int {
 	return int(math.Round(k*s.slope + s.intercept))
 }
 
+// buildPLAModel 构建PLA model，分片线性近似模型（Piecewise Linear Approximation model）
 func buildPLAModel(keys []float64, epsilon int) []Segment {
 	model := []Segment{}
 	temp := []point{}
