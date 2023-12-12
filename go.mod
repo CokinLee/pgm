@@ -1,3 +1,3 @@
-module github.com/agnivade/pgm
+module github.com/CokinLee/pgm
 
 go 1.15
